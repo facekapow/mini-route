@@ -2,7 +2,7 @@
 
 var url = require('url');
 
-function MiniRoute(server) {
+function MiniRoute(server, opts) {
   var self = this;
 
   this._routes = {};
@@ -237,6 +237,12 @@ function MiniRoute(server) {
     if (self._routes[method][path]) {
       for (var i = 0; i < self._routes[method][path].length; i++) {
         self._routes[method][path][i](req, res);
+      }
+    }
+    if (opts && opts.notFound && opts.notFound === true) {
+      if (!self._routes[method][path]) {
+        res.statusCode = 404;
+        res.end('404 not found.');
       }
     }
   });

@@ -19,6 +19,17 @@ server.listen(8080);
 
 This simply attaches itself to the server's `request` event and processes the routes.
 
+## Options
+You can also add an options object like so:
+```javascript
+var router = new MiniRoute(server, {
+  // opts
+});
+```
+
+Available options:
+  * notFound <bool> - Should return 404 when the route isn't found?
+
 ## Great, but, why not use Express?
 Sure, Express is great, but, at times I feel it's too bloated.
 Personally, I try to use as little modules as possible, and part of the reason I
