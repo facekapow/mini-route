@@ -1,0 +1,27 @@
+{
+  "name": "mini-route",
+  "version": "0.0.1",
+  "description": "A little mini-router for Node.",
+  "main": "index.js",
+  "directories": {
+    "example": "examples"
+  },
+  "scripts": {
+    "test": "echo \"No tests, yet.\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ArielAbreu/mini-route.git"
+  },
+  "keywords": [
+    "mini-route",
+    "route",
+    "routes"
+  ],
+  "author": "ArielAbreu",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ArielAbreu/mini-route/issues"
+  },
+  "homepage": "https://github.com/ArielAbreu/mini-route#readme"
+}
