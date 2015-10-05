@@ -40,7 +40,7 @@ function MiniRoute(server, opts) {
     (function(i) {
       self._routes[methods[i]] = {};
       self[methods[i]] = function(path, handler) {
-        if (self._routes[methods[i]][path]) {
+        if (!self._routes[methods[i]][path]) {
           self._routes[methods[i]][path] = [];
         }
         self._routes[methods[i]][path].push(handler);
